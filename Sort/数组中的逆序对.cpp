@@ -15,9 +15,9 @@ public:
                 data[k] = temp[j++];
             else if (j == right + 1 || temp[i] <= temp[j])
                 data[k] = temp[i++];
-            else { //左边比右边大，答案增加
+            else { //左边比右边大，答案增加,[1,2,3,4,0,5,6,7]
                 data[k] = temp[j++];
-                res += mid - i + 1; // 统计逆序对
+                res += mid + 1 - i; // 统计逆序对
             }
         }
         return res % mod;
